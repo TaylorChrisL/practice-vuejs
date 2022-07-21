@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <title>Practice Vue.js</title>
   <script src="https://unpkg.com/vue@next"></script>
 </head>
-
 <body>
   <h1>Hello from HTML!</h1>
   <div id="app">
     <h1>{{ message }}</h1>
     <p>{{ name }}</p>
     <input type="text" v-model="name">
+    <input type="checkbox" id="checkbox" v-model="checked" true-value="Still here" false-value="No Longer here(or is it?)"/>
+    <label for="checkbox">{{ checked }}</label>
+    <div>Selected: {{ selected }}</div>
+    
+    <select v-model="selected">
+      <option disabled value="">Please select one</option>
+      <option>Potato 1</option>
+      <option>Potato 2</option>
+      <option>Potato 3</option>
+    </select>
     <p>{{ potato }}</p>
     <button v-on:click="morePotato()">Click For Potato</button>
   </div>

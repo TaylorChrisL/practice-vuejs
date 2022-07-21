@@ -6,6 +6,7 @@ var App = {
       message: "Hello from JavaScript!",
       name: "Spudson",
       potato: "This is a potato",
+      checked: "Yup its here",
     };
   },
   methods: {
