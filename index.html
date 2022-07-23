@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <title>Practice Vue.js</title>
   <script src="https://unpkg.com/vue@next"></script>
+  <style>
+    .disabled {
+      color: brown;
+      transition: color 1s ease;
+    }
+  </style>
 </head>
 <body>
   <h1>Hello from HTML!</h1>
@@ -21,8 +27,20 @@
       <option>Potato 2</option>
       <option>Potato 3</option>
     </select>
+
+    <div>
+    <input type="checkbox" v-model="showBigPotato">
+    <h2 v-bind:class="{disabled: showBigPotato}">BIG POTATO</h2>
+    </div>
+
     <p>{{ potato }}</p>
     <button v-on:click="morePotato()">Click For Potato</button>
+    <div v-for="pot in potatos">
+      <p>{{ pot }}</p>
+    </div>
+    <input type="text" v-model="newPotato">
+    <button v-on:click="addNewPotato()">Add a new potato</button>
   </div>
+
   <script src="index.js"></script>
 </body>

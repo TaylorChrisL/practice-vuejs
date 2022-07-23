@@ -11,10 +11,9 @@
 <body>
   <div id="app">
     {{ message }}
-    <div>1st number: <input type="text" v-model="number1"></div>
-    <div>2nd number: <input type="text" v-model="number2"></div>
-    <div>3rd number: <input type="text" v-model="number3"></div>
-    <div><button v-on:click="calculateSum()">Compute sum</button></div>
+    <div>1st number: <input type="text" v-on:input= "calculateSum()" v-model="number1"></div>
+    <div>2nd number: <input type="text" v-on:input= "calculateSum()" v-model="number2"></div>
+    <div>3rd number: <input type="text" v-on:input= "calculateSum()"  v-model="number3"></div>
     <p>The sum is: {{ sum }} </p>
   </div>
 </body>
